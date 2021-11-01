@@ -28,8 +28,7 @@ const nuevoModulo = 21 % 5 === 1;
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-var diferencia = x-y;
-return diferencia;
+return x - y;
 
 }
 
@@ -140,6 +139,13 @@ function esVocal(letra){
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Tu código:
+  if (letra.length>1){
+    return 'Dato incorrecto';
+    }
+
+   if(letra ==='a'|| letra== 'e' || letra ==='i'|| letra== 'o' || letra== 'u'){
+   return 'Es vocal';
+   } 
  }
 
 function obtenerMayor(x, y) {
@@ -147,6 +153,7 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
+return Math.max(x,y);
 
 }
 
@@ -170,7 +177,20 @@ function colors(color) {
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
   // Tu código:
-
+switch (color) {
+  case 'blue':
+    msj = 'This is blue';
+    break ;
+  case 'red':
+      msj = "This is red";
+    break ;
+  case 'green':
+      msj = "This is green";
+    break ;
+  case 'orange':
+      msj = "This is orange";
+     break ;
+}
 }
 
 function esDiezOCinco(numero) {
@@ -184,7 +204,12 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-
+if (numero<50 && numero > 20) {
+  return true;
+  
+}else{
+  return false;
+}
 }
 
 function esPrimo(numero) {
@@ -194,7 +219,15 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   // Tu código:
-
+if (numero===0 || numero===1) {
+  return false;
+}
+for (let i = 2; i < numero; i++) {
+  if (numero % i===0) {
+   return false;
+  } 
+}
+return true;
 }
 
 function doWhile(numero) {
