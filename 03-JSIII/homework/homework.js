@@ -52,8 +52,8 @@ function agregarStringInvertida() {
     constructor(nombre,apellido,edad,domicilio) {
       this.nombre=nombre;
       this.apellido=apellido;
-      this.edad=edad
-      this.domicilio=domicilio
+      this.edad=edad;
+      this.domicilio=domicilio;
     }    
 }
 
